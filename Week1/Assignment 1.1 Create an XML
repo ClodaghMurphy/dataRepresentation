@@ -1,0 +1,35 @@
+<!-- Create an XML file that stores data for a library. 
+The library has two catalogues (technical books and for cookery books).
+Each catalogue can contain a number of books (say 2 for the purpose of this exercise) . 
+Books will have an ISBN, title and author.-->
+
+<!--this is the declaration -->
+<?xml version="1.0" encoding="utf-8"?>
+<GMIT Library>
+<!--sets the root node. XML must have a single root element that encompasses the others -->
+  <books>
+    <catalogue>Technical</catalogue>
+    <isbn>1430265957</isbn>
+    <title>Practival Node.js</title>
+    <author>Angela Mardan</author>
+  </books>
+  <books>
+    <catalogue>Technical</catalogue>
+    <isbn>0136073735</isbn>
+    <title>Computer Organization and Architecture</title>
+    <author>Winona Stallings</author>
+ </books>
+  <books>
+    <catalogue>Cookery Books</catalogue>
+    <isbn>0722514549</isbn>
+    <title>The Single Vegan</title>
+    <author>Leah Leneman</author>
+</books>
+  <books>
+    <catalogue>Cookery Books</catalogue>
+    <isbn>9781904859994</isbn>
+    <title>Another Dinner is Possible</title>
+    <author>Isy Michaels</author>
+</books>
+</GMIT Library> 
+<!--indicate end of root element/node -->
