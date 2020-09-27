@@ -1,0 +1,75 @@
+<html>
+    <head>
+    <title>View Cars</title> 
+<!--  Put this “magic” line in your header (this is called CDN)-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>Cars</h1>
+         </br>  
+		 <!-- code for the create button-->
+        <button>Create</button>
+		</br>  
+		<h1>All Cars</h1>		 
+
+<!--  Add a class attribute to the table with value “table”
+Further info available here https://getbootstrap.com/docs/4.3/content/tables/-->
+        <table class="table">
+		
+
+<!-- code for the table -->
+            <tr>
+                <th>reg</th>
+                <th>make</th>
+                <th>model</th>
+                <th>price</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+
+            <tr>
+                <td>191 MO 123</td>
+                <td>Ford</td>
+                <td>Mondeo</td>
+                <td>25,000</td>
+                <td><button>update</button></td>
+                <td><button>delete</button></td>
+            </tr>
+
+            <tr>
+                <td>12 D 123</td>
+                <td>Fiat</td>
+                <td>Punto</td>
+                <td>4000</td>
+                <td><button>update</button></td>
+                <td><button>delete</button></td>
+            </tr>
+        
+            <tr>
+                <td>08 G 123</td>
+                <td>Nissan</td>
+                <td>Almera</td>
+                <td>500</td>
+                <td><button>update</button></td>
+                <td><button>delete</button></td>
+                </tr>
+
+        </table>
+<h2><span>Create &</span> <span>Update this</span> <span>Car</span></h2>
+            Reg<input type="text" name="reg"><br/>
+            Make<select name="make">
+                <option value="Ford">Ford</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Nissan">Nissan</option>
+                </select></br>
+            Model<input type="text" name="model"></br>
+            Price<input type="number" name="price"></br>
+			
+			
+<!--   Create the two buttons, I have put these in a span tag because only one will be displayed later (when we put in functionality) -->
+            <span><button>Create</button></span>
+            <span><button>Update</button></span>
+
+        
+     </body>
+</html>
