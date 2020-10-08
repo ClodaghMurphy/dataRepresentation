@@ -1,1 +1,24 @@
-#Make a webpage with an input and a button, when the user clicks the button then the contents of the input will display in another div.
+<!-- Make a webpage with an input and a button, when the user clicks the button then the contents of the input will display in another div. -->
+
+<html>
+    <head>
+        <title>e2.3</title>
+       
+    </head>
+    <body>
+        <input id="name" type="text" value="enter name"/>
+        <br/>
+<!--buttonClicked is a function-->      
+        <button onclick="buttonClicked()">click me</button><br/>
+        <div id="output">output will go here</div>
+        
+        <script>
+<!--buttonClicked function description--> 
+            function buttonClicked(){
+                var output= document.getElementById('name').value
+                document.getElementById('output').innerText = output
+            }
+            
+        </script>
+    </body>
+</html>
