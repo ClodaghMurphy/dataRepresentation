@@ -1,26 +1,29 @@
 <html>
-        <head>
-            <title>2.5 Make a webpage that has two <div>, only one should be visible at a time, each <div> will have a button that will make the other div visible (and hide itself).</title> 
-        </head>
+    <head>
+        <title>2.5 Make a webpage that has two <div>, only one should be visible at a time, each <div> will have a button that will make the other div visible (and hide itself).</title> 
+    </head>
 <!-- this is an exercise in manipulation of display-->
 <!-- elements can be made visible or hidden, disabled as required with disabled=true -->
-        <body>
-                <div id="div1" style="background-color: royalblue">
+
+    <body>
+                <div id="div1" style="background-color: greenyellow">
                     <br/>
                     some text <br/>
                     <button onclick="showDiv2()">show Div2</button>
                 </div>
-                <div id="div2" style="background-color: red; display: none">
+                <div id="div2" style="background-color:plum; display: none">
                     <br/>
                     div2 <br/>
                     <button onclick="showDiv1()">show Div1</button>
                 </div>
                 <script>
+//you need to write two functions to allow for these two scenarios
                 function showDiv2(){
                     document.getElementById("div1").style.display = "none";
                     document.getElementById("div2").style.display = "block";
                 }
                 function showDiv1(){
+//more or less the opposite of showDiv2
                     document.getElementById("div1").style.display = "block";
                     document.getElementById("div2").style.display = "none";
                 }
