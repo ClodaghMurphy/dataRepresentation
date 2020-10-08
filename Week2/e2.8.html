@@ -15,11 +15,15 @@
 
         <script>
          function doForm(){
-             var employee ={}
+             var employee ={}//new object
              var form = document.getElementById("myForm")
+             //properties of the employee object
+             //use of querySelector to identify the prenamed inputs (firstName etc,.)
              employee.firstName = form.querySelector('input[name="firstName"').value
              employee.lastName = form.querySelector('input[name="lastName"').value
              employee.age = form.querySelector('input[name="age"').value
+// this is the command to output onto console.log rather than onto the webpage
+//stringify to make it purty
              console.log("form data "+JSON.stringify(employee))
          }
         

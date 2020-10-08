@@ -1,1 +1,42 @@
-#10. Create a button that when it is clicked adds a row to the table (above) with data.
+<!--10. Create a button that when it is clicked adds a row to the table (above) with data.-->
+
+<html>
+    <head>
+        <title>2.9</title> 
+    </head>
+    <body>
+        <table id ="mainTable">
+            <tr>
+                <td>how now</td>
+                <td>brown cow</td>
+                <td><button onclick="doRow(this)">output</button></td>
+            </tr>
+        </table>
+        <button onclick="createRow()">create Row</button><!-- when clicked it will create a row-->
+    </body>
+    <script>
+        function doRow(buttonElement){
+            var rowElement = buttonElement.parentNode.parentNode
+            var data={}
+            data.cell1 = rowElement.cells[0].firstChild.textContent;
+            data.cell2 = rowElement.cells[1].firstChild.textContent;
+
+            console.log(JSON.stringify(data))
+            
+        }
+        function createRow(){
+            var tableElement = document.getElementById('mainTable')
+            var data = {cell1:'this',cell2:'and that ',cell3:'thanks for the fish'}
+
+            var rowElement = tableElement.insertRow(-1)//method to add row to DOM tree -1 means at end
+            var cellElement = rowElement.insertCell(0)//method to add cell to DOM tree 0 means at start
+            cellElement.innerHTML = data.cell1;
+            cellElement = rowElement.insertCell(1)//insert cell at position 1
+            cellElement.innerHTML = data.cell2;
+            cellElement = rowElement.insertCell(2)//insert cell at position 2
+            cellElement.innerHTML = data.cell3;
+            
+        }
+    
+    </script>
+</html>
