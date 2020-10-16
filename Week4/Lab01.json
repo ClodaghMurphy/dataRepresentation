@@ -1,0 +1,22 @@
+
+{
+    "_comment": "json doesn't support comments!",
+    "_comment": " the task is to add two new employees and extend original doc to include address and age",
+    "_comment": " it is achieved by addin the names _address_ and _age_ in the same style as below age doesnt need commas,
+
+    "employees": [
+        {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        {
+            "firstName": "Anna",
+            "lastName": "Smith"
+        },
+        {
+            "firstName": "Peter",
+            "lastName": "Jones"
+        }
+        
+    ]
+}

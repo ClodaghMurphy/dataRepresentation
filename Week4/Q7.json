@@ -1,0 +1,14 @@
+
+{
+
+    "employees": [
+        {
+            "Name": "Fred",
+            "age": 24
+        }
+            
+        
+    ]
+}
+
+{ "name":"fred", "age":24 }

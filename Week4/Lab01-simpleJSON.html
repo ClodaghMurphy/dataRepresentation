@@ -1,0 +1,35 @@
+<!--Write the code that will convert the following JSON into a javascript object
+And prints out the name of the author to the console. (You can link this code to a
+button or have it so that it runs when the page is loaded)
+
+
+-->
+<!--{ "isbn":1234567, "Author": "Andrew Beatty", "Title" : "the emptness of ping-pong balls"}-->
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>
+            read a simple json
+        </title>
+    </head>
+    <body>
+        <button onclick="readJSON()">go</button>
+    </body>
+    <script>
+        function readJSON(){
+            $.ajax({
+                "url": "https://api.coindesk.com/v1/bpi/currentprice.json ",
+                "method":"GET",
+                "data":"",
+                "dataType": "JSON",
+                "success":function(result){
+                    console.log(result);
+                },
+                "error":function(xhr,status,error){
+                    console.log("error: "+status+" msg:"+error);
+                }
+            });
+        }
+    </script>
+</html>
