@@ -1,6 +1,65 @@
 <!--
-Write a web page that uses AJAX to read the JSOn from the website 
+Write a web page that uses AJAX to read the JSON from the website 
 https://api.coindesk.com/v1/bpi/currentprice.json
 Modify the webpage to output the euro rate for bit coin to the page.
 Modify the code to print out the US dollar rate and the British pound rate.
 -->
+
+<html>
+    <head>
+        <!--magic code!-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>
+            lab03 ajax
+        </title>
+    </head>
+    <body>
+        <!--click on the button to call the function-->
+        <button onclick="readJSON()">bitcoin euro rate today</button>
+        <div id="output"></div>
+        <!--div for the output on the webpage this time instead of the console-->
+         <!--click on the button to call the function-->
+         <button onclick="readJSON2()">bitcoin dollar rate today</button>
+         <div id="output2"></div>
+         <!--div for the output on the webpage this time instead of the console-->
+    </body>
+    <script>
+        function readJSON(){
+            $.ajax({//call ajax
+            //json object inside the ajax
+                "url": "https://api.coindesk.com/v1/bpi/currentprice.json ",
+                "method":"GET",
+                "data":"",
+                "dataType": "JSON",
+                "success":function(result){
+                    //console.log(result);
+                    var rate = result.bpi.EUR.rate// informed by first extraction of content
+                    //console.log(rate);
+                    document.getElementById("output").innerText = rate;
+                },
+                "error":function(xhr,status,error){//xhr is an object that contains information
+                    console.log("error: "+status+" msg:"+error);
+                }
+            });
+
+        } function readJSON2(){
+            $.ajax({//call ajax
+            //json object inside the ajax
+                "url": "https://api.coindesk.com/v1/bpi/currentprice.json ",
+                "method":"GET",
+                "data":"",
+                "dataType": "JSON",
+                "success":function(result){
+                    //console.log(result);
+                    var rate = result.bpi.USD.rate// informed by first extraction of content
+                    //console.log(rate);
+                    document.getElementById("output2").innerText = rate;
+                },
+                "error":function(xhr,status,error){//xhr is an object that contains information
+                    console.log("error: "+status+" msg:"+error);
+                }
+            });
+
+        }
+    </script>
+</html>

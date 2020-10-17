@@ -1,4 +1,45 @@
 <!--
  Here is the URL for another cryptocurrency, print out the dollar price to a webpage
-https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=BTC,USD,EUR   
--->
+  {"BTC":0.03244,"USD":368.73,"EUR":314.78}
+https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=BTC,USD,EUR -->
+
+
+
+<html>
+    <head>
+        <!--magic code!-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>
+            lab03 ajax
+        </title>
+    </head>
+    <body>
+        <!--click on the button to call the function-->
+        <button onclick="readJSON()">bitcoin $ rate today</button>
+        <div id="output"></div>
+        <!--div for the output on the webpage this time instead of the console-->
+        
+    </body>
+    <script>
+        function readJSON(){
+            $.ajax({//call ajax
+            //json object inside the ajax
+                "url": "https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=BTC,USD,EUR",
+                "method":"GET",
+                "data":"",
+                "dataType": "JSON",
+                "success":function(result){
+                    console.log(result);
+                    //console.log(result);
+                    var rate = result.USD;// informed by first extraction of content
+                    console.log(rate);
+                    document.getElementById("output").innerText = rate;
+                },
+                "error":function(xhr,status,error){//xhr is an object that contains information
+                    console.log("error: "+status+" msg:"+error);
+                }
+            });
+
+        } 
+    </script>
+</html>

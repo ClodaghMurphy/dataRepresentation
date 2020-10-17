@@ -1,4 +1,27 @@
 <!-- Write the code that will convert the following JSON into a javascript object (array)
 And then using a for loop print out each of the first names to the console
-
 -->
+
+<html>
+    <head>
+        <title>lab02 json array</title>
+    </head>
+    <body>
+     <!--   <button onclick="displayJSON()">go</button> -->
+    </body>
+    <script>
+        
+            //make the json screen using var keyword
+            var jsonString = '{"employees": [{"firstName": "John", "lastName": "Doe"},{ "firstName": "Anna","lastName": "Smith"},{"firstName": "Peter","lastName": "Jones"}]}'
+            //pass in the JSON string to be parsed, you could also hardcode the string instead
+            var obj = JSON.parse(jsonString);
+            var employees = obj.employees;
+            //the for loop, where the first names will be printed to the console only
+            for (employee of obj.employees){
+                console.log(employee.firstName);
+            }
+        
+    </script>
+<!-- An example of a more modern way instead of a for loop
+    employees.forEach(employee => {console.log(employee.lastName);});
+</html>
