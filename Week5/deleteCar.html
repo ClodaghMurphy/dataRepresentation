@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> Update Cars</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       
+        </head>
+    <body>
+        <h1>Cars</h1>
+
+            <script>
+            function deleteCar(){
+            var car = {"reg":"12 D 1234"}
+            console.log(JSON.stringify(car));
+            //pass data in as JSON string (not object!) otherwise the object will be formatted by ajax into url parameters
+            $.ajax({
+                "url": "http://127.0.0.1:5000/cars"+encodeURI(car.reg),//encodeURI will do the required coding 20% etc
+                "method":"DELETE",
+                "data":"",
+                "dataType": "JSON",
+                contentType: "application/json; charset=utf-8",//content type needs to be set as json
+                "success":function(result){
+                    console.log(result);
+                    document.getElementById("output").innerText = JSON.stringify(result);    
+                },
+                "error":function(xhr,status,error){
+                    console.log("error: "+status+" msg:"+error);
+                }
+            });
+ 
+        }
+ </script>
+</html>
+            
+            
+            </script>

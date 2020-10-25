@@ -1,0 +1,37 @@
+<html>
+    <head> </head>
+        <title> Update Cars</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+       
+        
+    
+        <h1>Cars Data</h1>
+        <body>
+        <button onclick="callUpdate()">Can I Update?</button> </body>
+        <script>
+            function callUpdate() {
+            var reg ="202 D 1312"
+            var car = {"price":2500}
+            console.log("function was called")
+            //console.log(JSON.stringify(car));
+            //pass data in as JSON string (not object!) otherwise the object will be formatted by ajax into url parameters
+            $.ajax({
+                url: "http://127.0.0.1:5000/cars/"+encodeURI(reg),
+                data: JSON.stringify(car),
+                dataType: "JSON",
+                method:"PUT",
+                contentType: "application/json; charset=utf-8",//content type needs to be set as json
+                "success":function(result){
+                    console.log(result)
+                },
+                "error":function(xhr,status,error){
+                    console.log("error: "+msg+" code is:"+error);
+                }
+            });
+ 
+        }
+ </script>
+</html>
+            
+            
+          

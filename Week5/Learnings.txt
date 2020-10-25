@@ -1,0 +1,13 @@
+* Flask is a python module
+*The flask code is written in python .py
+
+* If you use Copy Path feature and paste the file path
+It's using the Operating System and not the flask app server
+Copy the URL to use the app server
+
+* I don't understand why the "test" item can be chosen from cars, but not any
+other deatail at http://127.0.0.1:5000/cars and then http://127.0.0.1:5000/cars/test
+
+
+Access to XMLHttpRequest at 'http://127.0.0.1:5000/cars' from origin 'null' has been 
+blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
