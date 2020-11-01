@@ -7,7 +7,7 @@ import requests
 # remove the minus sign from the key
 # you can add this to your code just don't commit it
 # or use an API key to your own repo
-g = Github("7aa146eafee094d3a7b1e81aa1d8fcb0eec8b910")
+g = Github("7aa146eafee094d3a7b1e81aa1d8fcb0eec8b91=0")
 
 #for repo in g.get_user().get_repos():
 #    print(repo.name)
@@ -26,3 +26,5 @@ newContents = contentOfFile + " more stuff on a Sunday morning \n"
 print (newContents)
 gitHubResponse=repo.update_file(fileInfo.path,"updated by prog",newContents,fileInfo.sha)
 print (gitHubResponse)
+
+#this worked during the morning but doens't any more at 6pm

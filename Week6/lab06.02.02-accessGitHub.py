@@ -3,7 +3,7 @@ import json
 
 
 # remove the minus sign
-apiKey = '7aa146eafee094d3a7b1e81aa1d8fcb0eec8b910'
+apiKey = '7aa146eafee094d3a7b1e81aa1d8fcb0eec8b91-0'
 url = 'https://api.github.com/repos/datarepresentationstudent/aPrivateOne'
 filename ="repo.json"
 

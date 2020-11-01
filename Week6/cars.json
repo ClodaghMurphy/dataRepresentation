@@ -13,22 +13,16 @@
             "reg": "11 MO 1234"
         },
         {
-            "make": "Nissan",
-            "model": "Almera",
+            "make": "Ford",
+            "model": "Kuga",
             "price": 8000,
             "reg": "test"
         },
         {
-            "make": "blah",
-            "model": "blah",
-            "price": 1234,
-            "reg": "123"
-        },
-        {
-            "make": "blah",
-            "model": "blah",
-            "price": 1234,
-            "reg": "123"
+            "make": "Ford",
+            "model": "Prius",
+            "price": 12324,
+            "reg": "08 T 1234"
         }
     ]
 }

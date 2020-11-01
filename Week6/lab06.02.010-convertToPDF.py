@@ -20,21 +20,8 @@ import json
 #html = '<h1>hello world</h1>This is html'
 f = open("../Week2/carviewer2.html", "r")
 html = f.read()
-#print (html)
+print (html)
 #########################
 #That would be handy if you wanted to copy some beautiful pre-existing Code
 
 #######################
-
-#provided by the API resource owner (html2pdf)
-#The script should print out the status code of the response
-apiKey = '46ceed910c24ff7cce8240e89ec7b71912f6f40f2ec55fd217ce150ad6d4f1c4'
-url = 'https://api.html2pdf.app/v1/generate'
-
-data = {'html': html,'apiKey': apiKey}
-response = requests.post(url, json=data)
-print (response.status_code)
-
-#3. Modify the program to write the binary data returned to a file .pdf
-newFile = open("lab06.02.01.htmlaspdf.pdf", "wb")
-newFile.write(response.content)

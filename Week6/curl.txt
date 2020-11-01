@@ -1,0 +1,31 @@
+Command with the wrong API key
+(Same result with the right key! Maybe someone committed it by mistake)
+
+C:\ALL MY STUFF\GMIT\dataRepresentation\dataRepresentation\Week6 (master -> origin)
+λ curl -i -H "Authorization: token 7aa146eafee094d3a7b1e81aa1d8fcb0eec8b91-0" https://api.github.com/user/repos
+
+HTTP/1.1 401 Unauthorized
+Date: Sun, 01 Nov 2020 17:13:52 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 90
+Server: GitHub.com
+Status: 401 Unauthorized
+X-GitHub-Media-Type: github.v3; format=json
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 59
+X-RateLimit-Reset: 1604254432
+X-RateLimit-Used: 1
+Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: origin-when-cross-origin, strict-origin-when-cross-origin
+Content-Security-Policy: default-src 'none'
+Vary: Accept-Encoding, Accept, X-Requested-With
+X-GitHub-Request-Id: C809:37EA:7E14E71:8E91BC5:5F9EECD0
+
+{
+  "message": "Bad credentials",
+  "documentation_url": "https://docs.github.com/rest"
