@@ -14,11 +14,11 @@
 
 # [START gmail_quickstart]
 from __future__ import print_function
-import pickle
+import pickle#gmail users store credentials
 import os.path
-#from googleapiclient.discovery import build
-#from google_auth_oauthlib.flow import InstalledAppFlow
-#from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow#oath
+from google.auth.transport.requests import Request
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
@@ -34,7 +34,7 @@ def main():
     if os.path.exists('token.pickle'):
         with open('token.pickle', 'rb') as token:
             creds = pickle.load(token)
-    # If there are no (valid) credentials available, let the user log in.
+    # If there are no (valid) credentials available, let the user log in to update them
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())

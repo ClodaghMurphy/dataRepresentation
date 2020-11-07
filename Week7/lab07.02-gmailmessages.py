@@ -62,22 +62,23 @@ def main():
       messages.extend(response['messages'])
 
     for message in messages:
-       #print(message['id'])
+        #print(message['id'])
         completeMessage = service.users().messages().get(userId='me', id = message['id']).execute()
         #print(completeMessage['snippet'])
         headers = completeMessage['payload']['headers']
         #print (headers)
         snippet = completeMessage['snippet']
         subject = list(filter(lambda h: h['name']=='Subject',headers))[0]['value']
-        massageTo = list(filter(lambda h: h['name']=='To',headers))[0]['value']
-        messageFrom = list(filter(lambda h: h['name']=='From',headers))[0]['value']
+        print(subject)
+        #messageTo = list(filter(lambda h: h['name']=='To',headers))[0]['value']
+        #messageFrom = list(filter(lambda h: h['name']=='From',headers))[0]['value']
         #print (messageFrom)
         # you can put this information into an excel spreadsheet here
         
 
     
-    #with open('aMessage.json', 'w') as f:
-    #    json.dump(completeMessage, f, indent=4)
+    with open('aMessage.json', 'w') as f:
+       json.dump(snippet, f, indent=4)
     
 
 if __name__ == '__main__':
