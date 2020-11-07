@@ -1,0 +1,15 @@
+Trying to get results out of a particular document
+on a website that has lots of similar documents.
+
+It is all there but you need to write smart commands
+to extract the info in a way that is human readable.
+You need to take it incrementally also
+first get the list
+then get data contained in the list
+
+*In relation to the pagination piece, you are again using terms
+that are particular to the resource
+
+https://reports.sem-o.com/api/v1/documents/static-reports
+
+'pageSize': 50, 'currentPage': 1, 'totalItems': 22552, 'totalPages': 452}

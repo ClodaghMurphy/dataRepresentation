@@ -16,7 +16,7 @@
             $.ajax({
                 "url": "http://127.0.0.1:5000/cars",
                 "method":"POST",
-                "data":JSON.stringify(car),
+                "data":JSON.stringify(car),//stringify otherwise bad request
                 "dataType": "JSON",
                 contentType: "application/json; charset=utf-8",//gots to be JSON contentType
                 "success":function(result){
