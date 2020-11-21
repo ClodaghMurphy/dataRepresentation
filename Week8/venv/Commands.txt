@@ -1,0 +1,15 @@
+python -m venv venv
+.\venv\Scripts\activate.bat
+pip freeze
+pip install flask
+pip freeze > requirements.txt
+deactivate 
+(to exit venv again)
+
+rm -rf venv/
+(delete it altogether)
+
+
+more requirements.txt
+
+pip install -r requirements.txt
