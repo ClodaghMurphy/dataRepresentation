@@ -1,0 +1,7 @@
+[master 8bcf578] json
+ 7 files changed, 381 insertions(+), 11 deletions(-)
+ create mode 100644 Week7/aMessage.json
+ rename Week7/{lab02.02-gmailmessages.py => lab07.02-gmailmessages.py} (89%)
+ create mode 100644 Week7/lab07.03metEireann.py
+ create mode 100644 Week7/metEireann.json
+ create mode 100644 Week7/mtDillonToday.xls
