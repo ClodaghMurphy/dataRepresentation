@@ -1,5 +1,7 @@
 from BookDAO import bookDao
 #it calls it from the jaysus file name not the class you defined *in* the file
+#you call python and the name of this file  on command line
+#then check the sql command line separately to ensure the change was made
 print ("this is a print out from testBookDao.py")
 
 book = {

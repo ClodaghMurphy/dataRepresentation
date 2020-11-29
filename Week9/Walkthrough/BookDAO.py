@@ -1,4 +1,5 @@
 import mysql.connector
+import config as config
 #from mysql.connector import cursor
 
 class BookDao:
@@ -6,10 +7,16 @@ class BookDao:
 #variable stores database connection,ok to leave blank
     def __init__(self):
         self.db = mysql.connector.connect(
-            host = 'localhost',
-            user= 'root',
-            password = 'success',
-            database ='datarepresentation'
+        #    host = 'localhost',
+        #    user= 'root',
+        #    password = 'success',
+        #    database ='datarepresentation'
+
+ 
+        host=config.mysql['host'],
+        user=config.mysql['username'],
+        password=config.mysql['password'],
+        database=config.mysql['database']
         )
         print ("connection @ __init__ made bookDAO.py")
 
